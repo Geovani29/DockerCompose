@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  web1:
+    image: img1
+    container_name: web1
+    ports:
+      - "7999:80"
+
+  web2:
+    image: img2
+    container_name: web2
+    ports:
+      - "8001:80"
+
+  web3:
+    image: img3
+    container_name: web3
+    ports:
+      - "8002:80"
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - web1
+      - web2
+      - web3

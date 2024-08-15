@@ -5,19 +5,19 @@ services:
     image: img1
     container_name: web1
     ports:
-      - "7999:80"
+      - "80:80"
 
   web2:
     image: img2
     container_name: web2
     ports:
-      - "8001:80"
+      - "8000:80"
 
   web3:
     image: img3
     container_name: web3
     ports:
-      - "8002:80"
+      - "8001:80"
 
   nginx:
     image: nginx:latest

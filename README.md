@@ -14,7 +14,7 @@ py3: '''
     docker build -t img3 .
      '''
 
-2. despues retrocederas a la carpeta derek/ y ejecutaras el siguiente comando
+2. despues retrocederas a la carpeta DockerMain/ y ejecutaras el siguiente comando
     '''
     docker-compose up
     '''
